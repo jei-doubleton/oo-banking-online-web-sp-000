@@ -36,9 +36,6 @@ class Transfer
         self.status = "rejected"
         "Transaction rejected. Please check your account balance."
       end
-    elsif self.sender.valid? == false
-      self.status = "rejected"
-      "Transaction rejected. Please check your account balance."
     else
       self.status = "rejected"
       "Transaction already completed."
