@@ -38,7 +38,6 @@ class Transfer
       end
     else
       self.status = "rejected"
-      "Transaction already completed."
     end
   end
 
