@@ -33,7 +33,7 @@ class Transfer
           self.status = "complete"
         else
           "Transaction reject. Please check your account balance."
-          #reverse_transaction
+          self.reverse_transaction
         end
     elsif self.sender.valid? == false
       "Transaction reject. Please check your account balance."
