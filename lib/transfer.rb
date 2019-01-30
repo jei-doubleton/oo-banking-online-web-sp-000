@@ -1,3 +1,5 @@
+require 'pry'
+
 class Transfer
   attr_accessor :sender, :receiver, :status, :amount
 
@@ -17,6 +19,7 @@ class Transfer
   end
 
   def execute_transaction
+    binding.pry
     if self.sender.valid? && self.status != "complete"
       self.sender.balance -= self.amount
       self.receiver.balance += self.amount
