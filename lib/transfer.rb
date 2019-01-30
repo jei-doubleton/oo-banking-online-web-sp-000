@@ -27,14 +27,14 @@ class Transfer
   end
 
   def execute_transaction
-    if self.valid? && self.status != "complete"
+    if self.status != "complete"
       self.sender.balance -= self.amount
       self.receiver.balance += self.amount
       self.status = "complete"
-        if self.valid? == false
-          self.reverse_transfer
-          "Transaction rejected. Please check your account balance."
-        end
+      if self.valid? == false
+        self.reverse_transfer
+        "Transaction rejected. Please check your account balance."
+      end
     elsif self.sender.valid? == false
       "Transaction rejected. Please check your account balance."
     else
