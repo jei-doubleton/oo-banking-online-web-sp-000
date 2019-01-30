@@ -18,7 +18,11 @@ class Transfer
     end
   end
 
-
+  def reverse_transaction
+    self.sender.balance += self.amount
+    self.receiver.balance -+ self.amount
+    self.status = "pending"
+  end
 
   def execute_transaction
     binding.pry
