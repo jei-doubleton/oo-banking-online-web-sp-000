@@ -18,7 +18,7 @@ class Transfer
     end
   end
 
-  
+
 
   def execute_transaction
     binding.pry
