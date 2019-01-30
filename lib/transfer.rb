@@ -22,7 +22,7 @@ class Transfer
 
     self.sender.balance += self.amount
     self.receiver.balance -= self.amount
-    self.status = "pending"
+    self.status = "reversed"
   end
 
   def execute_transaction
